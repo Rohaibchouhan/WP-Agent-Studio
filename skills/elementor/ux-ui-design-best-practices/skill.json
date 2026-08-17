@@ -1,0 +1,64 @@
+{
+  "name": "elementor-ux-ui-design-best-practices",
+  "version": "1.0.0",
+  "category": "elementor",
+  "description": "Enterprise-grade Elementor 2026 UX/UI architectural design system: Global design tokens, fluid typography with clamp(), Flexbox/CSS Grid container scaffolding, Hick's Law cognitive UX, WCAG 2.2 AA accessibility, GSAP kinetic animations, and database-driven Loop Builders.",
+  "permissions": [
+    "edit_pages",
+    "publish_pages"
+  ],
+  "tools": [
+    "wordpress_get_site_info",
+    "elementor_get_global_colors",
+    "elementor_set_global_color",
+    "elementor_get_global_fonts",
+    "elementor_set_global_font",
+    "elementor_get_page",
+    "elementor_add_container",
+    "elementor_add_element",
+    "elementor_update_element",
+    "elementor_validate_page",
+    "elementor_create_backup"
+  ],
+  "safety": {
+    "dry_run_supported": true,
+    "auto_backup": true,
+    "require_approval": true,
+    "gsap_animation": {
+      "enabled": true,
+      "provider": "https://gsap.com/",
+      "scroll_trigger": true
+    }
+  },
+  "features": {
+    "design_tokenization": {
+      "enabled": true,
+      "css_variables_root": true,
+      "primitives_and_semantics": true
+    },
+    "fluid_typography": {
+      "enabled": true,
+      "use_clamp": true,
+      "relative_units": "rem",
+      "modular_scale": "perfect_fourth"
+    },
+    "layout_architecture": {
+      "mode": "containers_only",
+      "flexbox_enabled": true,
+      "css_grid_enabled": true,
+      "mobile_first": true
+    },
+    "wcag_accessibility": {
+      "level": "WCAG_2.2_AA",
+      "contrast_ratio": "4.5:1",
+      "min_target_size": "24px",
+      "focus_indicators": true,
+      "semantic_html_tags": true
+    },
+    "motion_ux": {
+      "library": "GSAP_ScrollTrigger",
+      "gpu_acceleration": true,
+      "prefers_reduced_motion": true
+    }
+  }
+}

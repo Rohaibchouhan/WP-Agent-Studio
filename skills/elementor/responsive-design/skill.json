@@ -1,0 +1,17 @@
+{
+  "name": "elementor-responsive-design",
+  "version": "1.0.0",
+  "category": "elementor",
+  "description": "Optimize Elementor layout containers and typography for mobile, tablet, and desktop breakpoints.",
+  "permissions": ["edit_pages"],
+  "tools": [
+    "elementor_get_page",
+    "elementor_update_element",
+    "elementor_validate_page"
+  ],
+  "safety": {
+    "dry_run_supported": true,
+    "auto_backup": true,
+    "require_approval": true
+  }
+}

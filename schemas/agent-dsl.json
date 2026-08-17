@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ElementorAgentDSL",
+  "description": "Domain-Specific Language for defining Elementor page structures safely.",
+  "type": "object",
+  "required": ["page"],
+  "properties": {
+    "page": {
+      "type": "object",
+      "required": ["title", "sections"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "slug": { "type": "string" },
+        "status": { "type": "string", "enum": ["publish", "draft", "private", "pending"] },
+        "sections": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/element" }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "element": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "id": { "type": "string" },
+        "type": {
+          "type": "string",
+          "enum": [
+            "container",
+            "heading",
+            "text-editor",
+            "button",
+            "image",
+            "icon",
+            "divider",
+            "spacer",
+            "icon-list",
+            "image-box",
+            "testimonial",
+            "testimonial-carousel",
+            "pricing-table",
+            "tabs",
+            "accordion",
+            "toggle",
+            "social-icons",
+            "form"
+          ]
+        },
+        "layout": { "type": "object" },
+        "content": { "type": "object" },
+        "styles": { "type": "object" },
+        "responsive": { "type": "object" },
+        "children": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/element" }
+        }
+      }
+    }
+  }
+}

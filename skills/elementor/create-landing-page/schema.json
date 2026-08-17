@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CreateLandingPageInput",
+  "type": "object",
+  "required": ["title"],
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "The title of the page to create or update."
+    },
+    "page_id": {
+      "type": "integer",
+      "description": "Optional target page ID for updating existing page."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "publish", "private"],
+      "default": "draft"
+    },
+    "dry_run": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

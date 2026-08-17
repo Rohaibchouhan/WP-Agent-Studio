@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UXUIDesignBestPracticesInput",
+  "type": "object",
+  "required": ["title"],
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Page title for the generated or updated Elementor page."
+    },
+    "page_id": {
+      "type": "integer",
+      "description": "Optional page ID to update an existing page."
+    },
+    "fluid_typography": {
+      "type": "object",
+      "description": "Fluid typography configuration using clamp().",
+      "properties": {
+        "enabled": { "type": "boolean", "default": true },
+        "use_clamp": { "type": "boolean", "default": true },
+        "unit": { "type": "string", "enum": ["rem", "em", "vw"], "default": "rem" },
+        "type_scale_ratio": {
+          "type": "string",
+          "enum": ["perfect_fourth", "minor_third", "augmented_fourth", "golden_ratio"],
+          "default": "perfect_fourth"
+        }
+      }
+    },
+    "layout_architecture": {
+      "type": "object",
+      "description": "Flexbox and CSS Grid layout parameters.",
+      "properties": {
+        "container_mode": { "type": "string", "enum": ["flexbox", "css_grid", "hybrid"], "default": "hybrid" },
+        "mobile_first": { "type": "boolean", "default": true },
+        "max_dom_depth": { "type": "integer", "default": 3 }
+      }
+    },
+    "wcag_accessibility": {
+      "type": "object",
+      "description": "Accessibility compliance controls.",
+      "properties": {
+        "conformance_level": { "type": "string", "enum": ["WCAG_2.2_AA", "WCAG_2.2_AAA"], "default": "WCAG_2.2_AA" },
+        "contrast_ratio": { "type": "string", "default": "4.5:1" },
+        "min_touch_target_px": { "type": "integer", "default": 24 },
+        "semantic_tags": { "type": "boolean", "default": true }
+      }
+    },
+    "motion_ux": {
+      "type": "object",
+      "description": "Motion and animation settings.",
+      "properties": {
+        "enable_gsap": { "type": "boolean", "default": true },
+        "scroll_trigger": { "type": "boolean", "default": true },
+        "gpu_accelerated_only": { "type": "boolean", "default": true },
+        "respect_reduced_motion": { "type": "boolean", "default": true }
+      }
+    },
+    "dry_run": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, simulates generation and returns dry-run layout tree without saving."
+    }
+  }
+}

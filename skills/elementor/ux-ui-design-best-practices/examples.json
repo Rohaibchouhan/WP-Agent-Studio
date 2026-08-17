@@ -1,0 +1,38 @@
+[
+  {
+    "user_request": "Build a SaaS Hero section with fluid typography, responsive flexbox container, and WCAG AA accessibility.",
+    "input_params": {
+      "title": "Enterprise AI Automation Platform",
+      "fluid_typography": { "enabled": true, "type_scale_ratio": "perfect_fourth" },
+      "wcag_accessibility": { "conformance_level": "WCAG_2.2_AA" }
+    },
+    "expected_structure": {
+      "elType": "container",
+      "settings": {
+        "flex_direction": "column",
+        "html_tag": "header",
+        "padding": { "top": "80", "bottom": "80", "left": "40", "right": "40", "unit": "px" }
+      },
+      "elements": [
+        {
+          "widgetType": "heading",
+          "settings": {
+            "title": "Automate Enterprise Workflows with AI Precision",
+            "header_size": "h1",
+            "title_color": "var(--color-heading-primary)",
+            "typography_font_size": { "unit": "custom", "size": "clamp(2.5rem, 1.8rem + 3.2vw, 4.25rem)" }
+          }
+        },
+        {
+          "widgetType": "button",
+          "settings": {
+            "text": "Start Free Trial",
+            "button_text_color": "#FFFFFF",
+            "background_color": "#F97316",
+            "padding": { "top": "16", "bottom": "16", "left": "32", "right": "32", "unit": "px" }
+          }
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "name": "ai-elementor-agent/ai-elementor-agent",
+  "description": "MCP-First WordPress Plugin allowing AI agents to control WordPress & Elementor.",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Rohaib Chouhan"
+    }
+  ],
+  "require": {
+    "php": ">=8.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "AiElementorAgent\\": "src/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  }
+}

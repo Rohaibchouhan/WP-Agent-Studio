@@ -1,0 +1,149 @@
+.aiea-admin-wrap {
+	margin-top: 20px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.aiea-header-title {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.aiea-status-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 20px;
+	margin-top: 20px;
+}
+
+.aiea-card {
+	background: #ffffff;
+	border: 1px solid #ccd0d4;
+	border-radius: 8px;
+	padding: 20px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.aiea-margin-top {
+	margin-top: 20px;
+}
+
+.aiea-flex-between {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.aiea-code-block {
+	display: block;
+	background: #f0f0f1;
+	padding: 10px 14px;
+	border-radius: 4px;
+	word-break: break-all;
+	font-size: 13px;
+}
+
+.aiea-status-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	font-weight: 600;
+	color: #008a20;
+}
+
+.aiea-indicator {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #00a32a;
+	display: inline-block;
+}
+
+.aiea-big-stat {
+	font-size: 36px;
+	font-weight: 700;
+	margin: 0;
+	color: #6C63FF;
+}
+
+.aiea-stat-label {
+	color: #646970;
+	margin-top: 4px;
+}
+
+.aiea-info-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.aiea-info-list li {
+	padding: 6px 0;
+	border-bottom: 1px solid #f0f0f1;
+}
+
+.aiea-badge {
+	display: inline-block;
+	padding: 3px 8px;
+	border-radius: 4px;
+	font-size: 11px;
+	font-weight: 700;
+}
+
+.aiea-badge-success {
+	background-color: #e7f8ed;
+	color: #008a20;
+}
+
+.aiea-badge-danger {
+	background-color: #fcf0f0;
+	color: #d63638;
+}
+
+.aiea-text-danger {
+	color: #d63638;
+}
+
+.aiea-text-warning {
+	color: #b35900;
+}
+
+/* Modal styling */
+.aiea-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.6);
+	z-index: 99999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.aiea-modal-content {
+	background: #fff;
+	padding: 30px;
+	border-radius: 10px;
+	max-width: 500px;
+	width: 90%;
+	box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.aiea-secret-box {
+	background: #f6f7f7;
+	border: 1px dashed #6C63FF;
+	padding: 15px;
+	border-radius: 6px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 15px;
+}
+
+.aiea-secret-box code {
+	font-size: 14px;
+	font-weight: 700;
+	color: #1d2327;
+}

@@ -1,0 +1,20 @@
+{
+  "name": "elementor-create-landing-page",
+  "version": "1.0.0",
+  "category": "elementor",
+  "description": "Construct high-converting, responsive landing pages using native Elementor Flexbox containers.",
+  "permissions": ["edit_pages", "publish_pages"],
+  "tools": [
+    "wordpress_get_site_info",
+    "elementor_get_global_colors",
+    "elementor_get_global_fonts",
+    "agent_build_page",
+    "elementor_validate_page",
+    "elementor_create_backup"
+  ],
+  "safety": {
+    "dry_run_supported": true,
+    "auto_backup": true,
+    "require_approval": true
+  }
+}
