@@ -1,14 +1,14 @@
 <?php
 /**
- * Plugin Name:       AI Elementor Agent
- * Plugin URI:        https://ai-elementor-agent.org
- * Description:       MCP-first WordPress plugin exposing an Model Context Protocol (MCP) server for AI agents to control WordPress & Elementor.
- * Version:           1.0.5
+ * Plugin Name:       WP Agent Studio
+ * Plugin URI:        https://wpagentstudio.com
+ * Description:       MCP-first WordPress plugin exposing a Model Context Protocol (MCP) server for AI agents to control WordPress & Elementor.
+ * Version:           1.0.6
  * Author:            Rohaib Chouhan
- * Author URI:        https://ai-elementor-agent.org
+ * Author URI:        https://wpagentstudio.com
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       ai-elementor-agent
+ * Text Domain:       wp-agent-studio
  * Domain Path:       /languages
  * Requires PHP:      8.1
  * Requires at least: 6.0
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'AI_ELEMENTOR_AGENT_VERSION', '1.0.5' );
+define( 'AI_ELEMENTOR_AGENT_VERSION', '1.0.6' );
 define( 'AI_ELEMENTOR_AGENT_DB_VERSION', '1.0.0' );
 define( 'AI_ELEMENTOR_AGENT_FILE', __FILE__ );
 define( 'AI_ELEMENTOR_AGENT_PATH', plugin_dir_path( __FILE__ ) );
@@ -29,24 +29,27 @@ define( 'AI_ELEMENTOR_AGENT_URL', plugin_dir_url( __FILE__ ) );
 // Setup Autoloader (Composer or Custom Fallback)
 if ( file_exists( AI_ELEMENTOR_AGENT_PATH . 'vendor/autoload.php' ) ) {
 	require_once AI_ELEMENTOR_AGENT_PATH . 'vendor/autoload.php';
-} else {
-	spl_autoload_register( function ( $class ) {
-		$prefix = 'AiElementorAgent\\';
-		$base_dir = AI_ELEMENTOR_AGENT_PATH . 'src/';
-		$len = strlen( $prefix );
-
-		if ( strncmp( $prefix, $class, $len ) !== 0 ) {
-			return;
-		}
-
-		$relative_class = substr( $class, $len );
-		$file = $base_dir . str_replace( '\\', '/', $relative_class ) . '.php';
-
-		if ( file_exists( $file ) ) {
-			require_once $file;
-		}
-	} );
 }
+
+spl_autoload_register( function ( $class ) {
+	$prefixes = array(
+		'WP\\AgentStudio\\'   => AI_ELEMENTOR_AGENT_PATH . 'src/',
+		'AiElementorAgent\\' => AI_ELEMENTOR_AGENT_PATH . 'src/',
+	);
+
+	foreach ( $prefixes as $prefix => $base_dir ) {
+		$len = strlen( $prefix );
+		if ( strncmp( $prefix, $class, $len ) === 0 ) {
+			$relative_class = substr( $class, $len );
+			$file = $base_dir . str_replace( '\\', '/', $relative_class ) . '.php';
+
+			if ( file_exists( $file ) ) {
+				require_once $file;
+				return;
+			}
+		}
+	}
+} );
 
 /**
  * Activation Hook

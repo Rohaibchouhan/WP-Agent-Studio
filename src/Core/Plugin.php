@@ -95,6 +95,13 @@ class Plugin {
 		$this->rest_api->register_routes();
 		$this->admin->init();
 		$this->gsap_loader->init();
+
+		try {
+			$ability_bridge = new \WP\AgentStudio\Abilities\AbilityBridge( $this->tool_registry );
+			$ability_bridge->register();
+		} catch ( \Throwable $e ) {
+			// Silent fallback if Abilities API is unavailable
+		}
 	}
 
 	public function get_gsap_loader(): GsapLoader {

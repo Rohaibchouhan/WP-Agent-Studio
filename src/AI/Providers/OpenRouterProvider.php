@@ -39,7 +39,7 @@ class OpenRouterProvider implements AIProviderInterface {
 			'headers' => array(
 				'Authorization' => 'Bearer ' . $this->api_key,
 				'HTTP-Referer'  => get_site_url(),
-				'X-Title'       => 'AI Elementor Agent',
+				'X-Title'       => 'WP Agent Studio',
 				'Content-Type'  => 'application/json',
 			),
 			'body'    => wp_json_encode( $body ),

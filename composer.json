@@ -1,5 +1,5 @@
 {
-  "name": "ai-elementor-agent/ai-elementor-agent",
+  "name": "wp-agent-studio/wp-agent-studio",
   "description": "MCP-First WordPress Plugin allowing AI agents to control WordPress & Elementor.",
   "type": "wordpress-plugin",
   "license": "GPL-2.0-or-later",
@@ -13,6 +13,7 @@
   },
   "autoload": {
     "psr-4": {
+      "WP\\AgentStudio\\": "src/",
       "AiElementorAgent\\": "src/"
     }
   },

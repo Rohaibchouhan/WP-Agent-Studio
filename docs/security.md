@@ -1,6 +1,6 @@
 # Security & Hardening Architecture
 
-Security is built into every layer of **AI Elementor Agent**.
+Security is built into every layer of **WP Agent Studio**.
 
 ---
 

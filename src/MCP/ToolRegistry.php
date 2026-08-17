@@ -38,6 +38,15 @@ class ToolRegistry {
 		return $this->tools[ $name ] ?? null;
 	}
 
+	/**
+	 * Get all registered tool objects.
+	 *
+	 * @return AbstractTool[]
+	 */
+	public function get_all_tools(): array {
+		return array_values( $this->tools );
+	}
+
 	public function list_tools(): array {
 		$list = array();
 		foreach ( $this->tools as $tool ) {
@@ -83,11 +92,27 @@ class ToolRegistry {
 			\AiElementorAgent\MCP\Tools\ElementorValidatePageTool::class,
 			\AiElementorAgent\MCP\Tools\ElementorGetWidgetSchemaTool::class,
 			\AiElementorAgent\MCP\Tools\AgentBuildPageTool::class,
+			\WP\AgentStudio\MCP\Tools\WordPressInspectSiteTool::class,
+			\WP\AgentStudio\MCP\Tools\WordPressManagePluginsTool::class,
+			\WP\AgentStudio\MCP\Tools\WordPressDirectPostTool::class,
+			\WP\AgentStudio\MCP\Tools\ElementorAtomicElementTool::class,
+			\WP\AgentStudio\MCP\Tools\ElementorCompositePageBuilderTool::class,
+			\WP\AgentStudio\MCP\Tools\ElementorCustomCodeTool::class,
+			\WP\AgentStudio\MCP\Tools\StockImageSideloadTool::class,
+			\WP\AgentStudio\MCP\Tools\WooCommerceProductTool::class,
+			\WP\AgentStudio\MCP\Tools\WooCommerceStoreLayoutTool::class,
+			\WP\AgentStudio\MCP\Tools\ACFDynamicContentTool::class,
+			\WP\AgentStudio\MCP\Tools\FormsBuilderTool::class,
+			\WP\AgentStudio\MCP\Tools\SEOOptimizationTool::class,
 		);
 
 		foreach ( $tool_classes as $class_name ) {
 			if ( class_exists( $class_name ) ) {
-				$this->register_tool( new $class_name( $engine, $context_manager, $token_manager, $global_styles ) );
+				try {
+					$this->register_tool( new $class_name( $engine, $context_manager, $token_manager, $global_styles ) );
+				} catch ( \Throwable $e ) {
+					$this->register_tool( new $class_name() );
+				}
 			}
 		}
 	}

@@ -144,7 +144,7 @@ class Server
 						'resources' => array('subscribe' => false, 'listChanged' => false),
 					),
 					'serverInfo' => array(
-						'name' => 'AI Elementor Agent Server',
+						'name' => 'WP Agent Studio Server',
 						'version' => AI_ELEMENTOR_AGENT_VERSION,
 					),
 				));

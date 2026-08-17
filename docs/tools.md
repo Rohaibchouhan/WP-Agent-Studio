@@ -1,4 +1,4 @@
-# AI Elementor Agent — Complete MCP Tools Reference
+# WP Agent Studio — Complete MCP Tools Reference
 
 The plugin exposes 24 structured tools categorized into Site, Media, Elementor Page, Widgets, Global Design System, Safety, and High-Level Agent Orchestration.
 

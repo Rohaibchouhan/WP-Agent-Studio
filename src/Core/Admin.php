@@ -39,8 +39,8 @@ class Admin {
 
 	public function register_menu(): void {
 		add_menu_page(
-			__( 'AI Elementor Agent', 'ai-elementor-agent' ),
-			__( 'AI Elementor Agent', 'ai-elementor-agent' ),
+			__( 'WP Agent Studio', 'wp-agent-studio' ),
+			__( 'WP Agent Studio', 'wp-agent-studio' ),
 			'manage_options',
 			'ai-elementor-agent',
 			array( $this, 'render_dashboard' ),
@@ -51,6 +51,7 @@ class Admin {
 		add_submenu_page( 'ai-elementor-agent', __( 'Dashboard', 'ai-elementor-agent' ), __( 'Dashboard', 'ai-elementor-agent' ), 'manage_options', 'ai-elementor-agent', array( $this, 'render_dashboard' ) );
 		add_submenu_page( 'ai-elementor-agent', __( 'AI Chat & Approval', 'ai-elementor-agent' ), __( 'AI Chat & Approval', 'ai-elementor-agent' ), 'edit_pages', 'ai-elementor-chat', array( $this, 'render_chat' ) );
 		add_submenu_page( 'ai-elementor-agent', __( 'MCP Settings', 'ai-elementor-agent' ), __( 'MCP Settings', 'ai-elementor-agent' ), 'manage_options', 'ai-elementor-mcp', array( $this, 'render_mcp' ) );
+		add_submenu_page( 'ai-elementor-agent', __( 'MCP Access Control', 'ai-elementor-agent' ), __( 'MCP Access Control', 'ai-elementor-agent' ), 'manage_options', 'ai-elementor-access-control', array( $this, 'render_access_control' ) );
 		add_submenu_page( 'ai-elementor-agent', __( 'AI Providers', 'ai-elementor-agent' ), __( 'AI Providers', 'ai-elementor-agent' ), 'manage_options', 'ai-elementor-providers', array( $this, 'render_providers' ) );
 		add_submenu_page( 'ai-elementor-agent', __( 'Permissions', 'ai-elementor-agent' ), __( 'Permissions', 'ai-elementor-agent' ), 'manage_options', 'ai-elementor-permissions', array( $this, 'render_permissions' ) );
 		add_submenu_page( 'ai-elementor-agent', __( 'Activity Log', 'ai-elementor-agent' ), __( 'Activity Log', 'ai-elementor-agent' ), 'manage_options', 'ai-elementor-log', array( $this, 'render_log' ) );
@@ -79,6 +80,10 @@ class Admin {
 
 	public function render_mcp(): void {
 		$this->load_view( 'mcp-settings' );
+	}
+
+	public function render_access_control(): void {
+		$this->load_view( 'access-control' );
 	}
 
 	public function render_providers(): void {

@@ -431,7 +431,7 @@ class RestApi
 		return new WP_REST_Response(array(
 			'status' => 'ok',
 			'mcp_enabled' => (bool) ($settings['mcp_enabled'] ?? true),
-			'plugin' => 'AI Elementor Agent',
+			'plugin' => 'WP Agent Studio',
 			'version' => AI_ELEMENTOR_AGENT_VERSION,
 			'debug_url' => get_rest_url(null, 'ai-elementor/v1/debug'),
 			'elementor' => array(

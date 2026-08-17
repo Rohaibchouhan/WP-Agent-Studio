@@ -1,6 +1,6 @@
 # AI Skills System Architecture
 
-The **AI Skills System** provides declarative knowledge, rules, and best-practice blueprints that guide AI agents (Claude, Gemini, OpenAI, Cursor, etc.) on how to execute multi-step operations against the **AI Elementor Agent MCP Server**.
+The **AI Skills System** provides declarative knowledge, rules, and best-practice blueprints that guide AI agents (Claude, Gemini, OpenAI, Cursor, etc.) on how to execute multi-step operations against the **WP Agent Studio MCP Server**.
 
 While **MCP Tools** define *what capabilities* the AI can execute (`create_container`, `add_widget`, `get_global_styles`), **AI Skills** define *how to use those capabilities intelligently* to build high-converting, beautiful, accessible, and responsive Elementor pages.
 

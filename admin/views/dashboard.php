@@ -13,7 +13,7 @@ $rest_url = get_rest_url( null, 'ai-elementor/v1/mcp' );
 
 <div class="wrap aiea-admin-wrap">
 	<h1 class="aiea-header-title">
-		<span class="dashicons dashicons-superhero"></span> AI Elementor Agent Overview
+		<span class="dashicons dashicons-superhero"></span> WP Agent Studio Overview
 	</h1>
 
 	<div class="aiea-status-grid">

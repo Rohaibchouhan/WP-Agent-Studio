@@ -1,6 +1,6 @@
-# AI Elementor Agent — Technical Architecture
+# WP Agent Studio — Technical Architecture
 
-The **AI Elementor Agent** WordPress plugin acts as a secure, high-performance bridge between external AI coding agents (such as Antigravity IDE) and WordPress + Elementor.
+The **WP Agent Studio** WordPress plugin acts as a secure, high-performance bridge between external AI coding agents (such as Antigravity IDE) and WordPress + Elementor.
 
 ---
 
