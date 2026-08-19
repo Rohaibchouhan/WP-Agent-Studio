@@ -1,6 +1,6 @@
 <?php
 
-namespace WP\AgentStudio\Integrations\WooCommerce;
+namespace AiElementorAgent\Integrations\WooCommerce;
 
 if (!defined('ABSPATH')) {
     exit;

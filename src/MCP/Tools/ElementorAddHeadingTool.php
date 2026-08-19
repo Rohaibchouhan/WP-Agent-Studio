@@ -43,7 +43,7 @@ class ElementorAddHeadingTool extends AbstractTool {
 		);
 	}
 
-	public function execute( array $arguments, array $context ): array {
+	public function execute( array $arguments, array $context = [] ): array {
 		$settings = array(
 			'title'       => $arguments['text'],
 			'header_size' => $arguments['tag'] ?? 'h2',

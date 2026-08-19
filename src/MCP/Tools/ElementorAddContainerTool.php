@@ -42,7 +42,7 @@ class ElementorAddContainerTool extends AbstractTool {
 		);
 	}
 
-	public function execute( array $arguments, array $context ): array {
+	public function execute( array $arguments, array $context = [] ): array {
 		$settings = array(
 			'flex_direction' => $arguments['direction'] ?? 'column',
 			'content_width'  => $arguments['width'] ?? 'boxed',

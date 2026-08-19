@@ -1,12 +1,12 @@
 <?php
 
-namespace WP\AgentStudio\Tests\Unit;
+namespace AiElementorAgent\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
-use WP\AgentStudio\Integrations\WooCommerce\WooCommerceAdapter;
-use WP\AgentStudio\Integrations\ACF\ACFAdapter;
-use WP\AgentStudio\Integrations\Forms\FormsAdapter;
-use WP\AgentStudio\Integrations\SEO\SEOAdapter;
+use AiElementorAgent\Integrations\WooCommerce\WooCommerceAdapter;
+use AiElementorAgent\Integrations\ACF\ACFAdapter;
+use AiElementorAgent\Integrations\Forms\FormsAdapter;
+use AiElementorAgent\Integrations\SEO\SEOAdapter;
 
 class Phase3EcosystemTest extends TestCase
 {

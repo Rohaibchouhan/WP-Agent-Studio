@@ -284,6 +284,20 @@ class AgentEngine {
 	}
 
 	/**
+	 * Proxy to ContextManager get_pages.
+	 */
+	public function get_pages( string $search = '', int $limit = 50 ): array {
+		return $this->context_manager->get_pages( $search, $limit );
+	}
+
+	/**
+	 * Get ContextManager instance.
+	 */
+	public function get_context_manager(): ContextManager {
+		return $this->context_manager;
+	}
+
+	/**
 	 * Helper for error responses.
 	 */
 	private function error_response( string $code, string $message, int $status_code = 400 ): array {

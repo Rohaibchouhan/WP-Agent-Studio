@@ -41,7 +41,7 @@ class ElementorSetGlobalFontTool extends AbstractTool {
 		);
 	}
 
-	public function execute( array $arguments, array $context ): array {
+	public function execute( array $arguments, array $context = [] ): array {
 		$pm = Plugin::get_instance()->get_permission_manager();
 		if ( ! $pm->can( 'modify_global_styles', $context['user_id'] ) ) {
 			return array(

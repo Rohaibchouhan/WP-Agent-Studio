@@ -1,6 +1,6 @@
 <?php
 
-namespace WP\AgentStudio\Integrations\SEO;
+namespace AiElementorAgent\Integrations\SEO;
 
 if (!defined('ABSPATH')) {
     exit;

@@ -40,7 +40,7 @@ class ElementorCreatePageTool extends AbstractTool {
 		);
 	}
 
-	public function execute( array $arguments, array $context ): array {
+	public function execute( array $arguments, array $context = [] ): array {
 		return $this->engine->create_page(
 			$arguments['title'],
 			$arguments['slug'] ?? '',

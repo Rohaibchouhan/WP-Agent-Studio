@@ -39,7 +39,7 @@ class ElementorCreateBackupTool extends AbstractTool {
 		);
 	}
 
-	public function execute( array $arguments, array $context ): array {
+	public function execute( array $arguments, array $context = [] ): array {
 		$backup_id = $this->revision_manager->create_backup(
 			(int) $arguments['page_id'],
 			$arguments['reason'] ?? 'Manual MCP Backup'

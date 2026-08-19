@@ -34,7 +34,7 @@ class ElementorGetGlobalFontsTool extends AbstractTool {
 		);
 	}
 
-	public function execute( array $arguments, array $context ): array {
+	public function execute( array $arguments, array $context = [] ): array {
 		return array(
 			'success' => true,
 			'fonts'   => $this->global_styles->get_global_fonts(),

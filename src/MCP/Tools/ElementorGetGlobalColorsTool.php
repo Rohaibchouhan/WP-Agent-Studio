@@ -34,7 +34,7 @@ class ElementorGetGlobalColorsTool extends AbstractTool {
 		);
 	}
 
-	public function execute( array $arguments, array $context ): array {
+	public function execute( array $arguments, array $context = [] ): array {
 		return array(
 			'success' => true,
 			'colors'  => $this->global_styles->get_global_colors(),

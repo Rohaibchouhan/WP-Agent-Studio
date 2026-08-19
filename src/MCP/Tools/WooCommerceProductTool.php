@@ -1,9 +1,9 @@
 <?php
 
-namespace WP\AgentStudio\MCP\Tools;
+namespace AiElementorAgent\MCP\Tools;
 
-use WP\AgentStudio\MCP\AbstractTool;
-use WP\AgentStudio\Integrations\WooCommerce\WooCommerceAdapter;
+use AiElementorAgent\MCP\AbstractTool;
+use AiElementorAgent\Integrations\WooCommerce\WooCommerceAdapter;
 
 if (!defined('ABSPATH')) {
     exit;

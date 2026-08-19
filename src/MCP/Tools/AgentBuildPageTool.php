@@ -38,7 +38,7 @@ class AgentBuildPageTool extends AbstractTool {
 		);
 	}
 
-	public function execute( array $arguments, array $context ): array {
+	public function execute( array $arguments, array $context = [] ): array {
 		return $this->engine->build_page_from_dsl(
 			$arguments['dsl'],
 			(bool) ( $arguments['dry_run'] ?? false ),

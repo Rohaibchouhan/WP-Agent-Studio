@@ -34,7 +34,7 @@ class WordPressGetSiteInfoTool extends AbstractTool {
 		);
 	}
 
-	public function execute( array $arguments, array $context ): array {
+	public function execute( array $arguments, array $context = [] ): array {
 		return array(
 			'success' => true,
 			'data'    => $this->context->get_site_info(),

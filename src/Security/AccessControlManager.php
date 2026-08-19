@@ -1,6 +1,6 @@
 <?php
 
-namespace WP\AgentStudio\Security;
+namespace AiElementorAgent\Security;
 
 if (!defined('ABSPATH')) {
     exit;

@@ -1,10 +1,10 @@
 <?php
 
-namespace WP\AgentStudio\MCP\Tools;
+namespace AiElementorAgent\MCP\Tools;
 
-use WP\AgentStudio\MCP\AbstractTool;
-use WP\AgentStudio\Integrations\Forms\FormsAdapter;
-use WP\AgentStudio\Elementor\ElementorWriter;
+use AiElementorAgent\MCP\AbstractTool;
+use AiElementorAgent\Integrations\Forms\FormsAdapter;
+use AiElementorAgent\Elementor\ElementorWriter;
 
 if (!defined('ABSPATH')) {
     exit;

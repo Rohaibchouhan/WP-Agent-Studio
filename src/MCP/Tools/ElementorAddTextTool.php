@@ -41,7 +41,7 @@ class ElementorAddTextTool extends AbstractTool {
 		);
 	}
 
-	public function execute( array $arguments, array $context ): array {
+	public function execute( array $arguments, array $context = [] ): array {
 		$settings = array(
 			'editor' => wp_kses_post( $arguments['content'] ),
 		);

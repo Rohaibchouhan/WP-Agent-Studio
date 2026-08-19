@@ -1,8 +1,8 @@
 <?php
 
-namespace WP\AgentStudio\MCP\Tools;
+namespace AiElementorAgent\MCP\Tools;
 
-use WP\AgentStudio\MCP\AbstractTool;
+use AiElementorAgent\MCP\AbstractTool;
 
 if (!defined('ABSPATH')) {
     exit;

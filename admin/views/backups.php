@@ -7,8 +7,8 @@ $page_id = (int) ( $_GET['page_id'] ?? 0 );
 $rm = new \AiElementorAgent\Backup\RevisionManager();
 $backups = $page_id ? $rm->list_backups( $page_id ) : array();
 
-$context = \AiElementorAgent\Core\Plugin::get_instance()->get_agent_engine();
-$pages = \AiElementorAgent\Core\Plugin::get_instance()->get_agent_engine()->get_pages();
+$context = \AiElementorAgent\Core\Plugin::get_instance()->get_context_manager();
+$pages = $context->get_pages();
 ?>
 
 <div class="wrap aiea-admin-wrap">

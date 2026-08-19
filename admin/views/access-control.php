@@ -1,6 +1,6 @@
 <?php
 
-use WP\AgentStudio\Security\AccessControlManager;
+use AiElementorAgent\Security\AccessControlManager;
 
 if (!defined('ABSPATH')) {
     exit;

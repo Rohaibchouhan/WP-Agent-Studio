@@ -1,6 +1,6 @@
 <?php
 
-namespace WP\AgentStudio\Integrations\Forms;
+namespace AiElementorAgent\Integrations\Forms;
 
 if (!defined('ABSPATH')) {
     exit;

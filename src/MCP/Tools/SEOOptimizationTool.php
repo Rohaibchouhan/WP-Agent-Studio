@@ -1,9 +1,9 @@
 <?php
 
-namespace WP\AgentStudio\MCP\Tools;
+namespace AiElementorAgent\MCP\Tools;
 
-use WP\AgentStudio\MCP\AbstractTool;
-use WP\AgentStudio\Integrations\SEO\SEOAdapter;
+use AiElementorAgent\MCP\AbstractTool;
+use AiElementorAgent\Integrations\SEO\SEOAdapter;
 
 if (!defined('ABSPATH')) {
     exit;

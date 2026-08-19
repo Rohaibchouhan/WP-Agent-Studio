@@ -36,7 +36,7 @@ class WordPressUploadMediaTool extends AbstractTool {
 		);
 	}
 
-	public function execute( array $arguments, array $context ): array {
+	public function execute( array $arguments, array $context = [] ): array {
 		$pm = Plugin::get_instance()->get_permission_manager();
 		if ( ! $pm->can( 'upload_media', $context['user_id'] ) ) {
 			return array( 'success' => false, 'error' => array( 'code' => 'PERMISSION_DENIED', 'message' => 'User lacks upload_media permission.' ) );

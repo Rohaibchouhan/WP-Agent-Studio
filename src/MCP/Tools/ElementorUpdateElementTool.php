@@ -40,7 +40,7 @@ class ElementorUpdateElementTool extends AbstractTool {
 		);
 	}
 
-	public function execute( array $arguments, array $context ): array {
+	public function execute( array $arguments, array $context = [] ): array {
 		return $this->engine->update_element(
 			(int) $arguments['page_id'],
 			$arguments['element_id'],

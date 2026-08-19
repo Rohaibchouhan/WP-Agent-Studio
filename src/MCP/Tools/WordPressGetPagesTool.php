@@ -37,7 +37,7 @@ class WordPressGetPagesTool extends AbstractTool {
 		);
 	}
 
-	public function execute( array $arguments, array $context ): array {
+	public function execute( array $arguments, array $context = [] ): array {
 		$search = sanitize_text_field( $arguments['search'] ?? '' );
 		$limit = isset( $arguments['limit'] ) ? (int) $arguments['limit'] : 50;
 

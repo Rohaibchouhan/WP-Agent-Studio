@@ -97,7 +97,7 @@ class Plugin {
 		$this->gsap_loader->init();
 
 		try {
-			$ability_bridge = new \WP\AgentStudio\Abilities\AbilityBridge( $this->tool_registry );
+			$ability_bridge = new \AiElementorAgent\Abilities\AbilityBridge( $this->tool_registry );
 			$ability_bridge->register();
 		} catch ( \Throwable $e ) {
 			// Silent fallback if Abilities API is unavailable
@@ -130,6 +130,18 @@ class Plugin {
 
 	public function get_global_styles(): GlobalStylesManager {
 		return $this->global_styles;
+	}
+
+	public function get_context_manager(): ContextManager {
+		return $this->context_manager;
+	}
+
+	public function get_tool_registry(): ToolRegistry {
+		return $this->tool_registry;
+	}
+
+	public function get_revision_manager(): RevisionManager {
+		return $this->revision_manager;
 	}
 
 	public function get_agent_engine(): AgentEngine {

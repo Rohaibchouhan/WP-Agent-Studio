@@ -1,9 +1,9 @@
 <?php
 
-namespace WP\AgentStudio\Abilities;
+namespace AiElementorAgent\Abilities;
 
-use WP\AgentStudio\Security\AccessControlManager;
-use WP\AgentStudio\MCP\ToolRegistry;
+use AiElementorAgent\Security\AccessControlManager;
+use AiElementorAgent\MCP\ToolRegistry;
 
 if (!defined('ABSPATH')) {
     exit;

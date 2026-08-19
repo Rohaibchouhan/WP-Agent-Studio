@@ -39,7 +39,7 @@ class ElementorRestoreBackupTool extends AbstractTool {
 		);
 	}
 
-	public function execute( array $arguments, array $context ): array {
+	public function execute( array $arguments, array $context = [] ): array {
 		$restored = $this->revision_manager->restore_backup(
 			(int) $arguments['page_id'],
 			$arguments['backup_id']

@@ -38,7 +38,7 @@ class ElementorGetPageTool extends AbstractTool {
 		);
 	}
 
-	public function execute( array $arguments, array $context ): array {
+	public function execute( array $arguments, array $context = [] ): array {
 		$page_id = (int) $arguments['page_id'];
 		$verbose = (bool) ( $arguments['verbose'] ?? false );
 

@@ -33,7 +33,7 @@ class WordPressGetMediaTool extends AbstractTool {
 		);
 	}
 
-	public function execute( array $arguments, array $context ): array {
+	public function execute( array $arguments, array $context = [] ): array {
 		$search = sanitize_text_field( $arguments['search'] ?? '' );
 		$limit = min( (int) ( $arguments['limit'] ?? 50 ), 100 );
 

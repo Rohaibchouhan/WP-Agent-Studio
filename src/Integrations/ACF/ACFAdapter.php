@@ -1,6 +1,6 @@
 <?php
 
-namespace WP\AgentStudio\Integrations\ACF;
+namespace AiElementorAgent\Integrations\ACF;
 
 if (!defined('ABSPATH')) {
     exit;

@@ -42,7 +42,7 @@ class ElementorAddElementTool extends AbstractTool {
 		);
 	}
 
-	public function execute( array $arguments, array $context ): array {
+	public function execute( array $arguments, array $context = [] ): array {
 		return $this->engine->add_element(
 			(int) $arguments['page_id'],
 			$arguments['widget_type'],

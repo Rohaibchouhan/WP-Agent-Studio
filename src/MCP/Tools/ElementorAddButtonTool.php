@@ -44,7 +44,7 @@ class ElementorAddButtonTool extends AbstractTool {
 		);
 	}
 
-	public function execute( array $arguments, array $context ): array {
+	public function execute( array $arguments, array $context = [] ): array {
 		$settings = array(
 			'text' => sanitize_text_field( $arguments['text'] ),
 			'link' => array(

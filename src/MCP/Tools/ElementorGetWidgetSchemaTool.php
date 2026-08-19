@@ -40,7 +40,7 @@ class ElementorGetWidgetSchemaTool extends AbstractTool {
 		);
 	}
 
-	public function execute( array $arguments, array $context ): array {
+	public function execute( array $arguments, array $context = [] ): array {
 		$widget_type = ! empty( $arguments['widget_type'] ) ? sanitize_text_field( $arguments['widget_type'] ) : '';
 
 		if ( ! empty( $widget_type ) ) {

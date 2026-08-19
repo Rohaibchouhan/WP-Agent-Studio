@@ -42,7 +42,7 @@ class ElementorAddImageTool extends AbstractTool {
 		);
 	}
 
-	public function execute( array $arguments, array $context ): array {
+	public function execute( array $arguments, array $context = [] ): array {
 		$image_setting = array();
 		if ( ! empty( $arguments['attachment_id'] ) ) {
 			$id = (int) $arguments['attachment_id'];

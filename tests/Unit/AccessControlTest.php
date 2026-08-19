@@ -1,9 +1,9 @@
 <?php
 
-namespace WP\AgentStudio\Tests\Unit;
+namespace AiElementorAgent\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
-use WP\AgentStudio\Security\AccessControlManager;
+use AiElementorAgent\Security\AccessControlManager;
 
 class AccessControlTest extends TestCase
 {
